@@ -1,0 +1,51 @@
+#Becareful on indent , def should come first, ifelse come second, follow by those printing command --!. 
+#Also those with chpice = input or num == 1 need space before equal sign
+
+def add(num1,num2):
+    return num1+num2
+
+def substract(num1,num2):
+    return num1-num2
+
+def multiply(num1,num2):
+    return num1*num2
+
+def divide(num1,num2):
+    if num2 == 0:
+        return "Error: Number is unidentified"
+    else:
+        return num1/num2
+    
+def calculator():
+    print("Select an operation: ")
+    print("1.Add")
+    print("2.Substract")
+    print("3.Multiply")
+    print("4.Divide")
+
+    choice = input()
+
+    if choice == "1":
+        num1=int(input("Enter first number: "))
+        num2=int(input("Enter second number: "))
+        print(add(num1,num2))
+    if choice == "2":
+        num1=int(input("Enter first number: "))
+        num2=int(input("Enter second number: "))
+        print(substract(num1,num2))
+    if choice == "3":
+        num1=int(input("Enter first number: "))
+        num2=int(input("Enter second number: "))
+        print(multiply(num1,num2))
+    if choice == "4":
+        num1=int(input("Enter first number: "))
+        num2=int(input("Enter second number: "))
+        print(divide(num1,num2))
+
+
+calculator()
+
+
+
+
+
