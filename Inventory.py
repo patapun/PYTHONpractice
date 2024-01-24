@@ -1,3 +1,5 @@
+#f" is format string in new version of python
+
 inventory = {}
 
 def add_item(item, quantity):
