@@ -1,0 +1,18 @@
+def display_restaurants(self, restaurants):
+        print("\nAvailable Restaurants:")
+        for i, restaurant in enumerate(restaurants, start=1):
+            print(f"{i}. {restaurant.name}")
+
+
+    def select_restaurants(self, restaurants):
+        print("\nSelect up to 4 restaurants. Enter 0 when finished.")
+        while len(self.selected_restaurants) < 4:
+            self.display_restaurants(restaurants)
+            choice = int(input("Select a restaurant (enter the number, 0 to finish): "))
+            if choice == 0:
+                break
+            elif 1 <= choice <= len(restaurants) and restaurants[choice - 1] not in self.selected_restaurants:
+                self.selected_restaurants.append(restaurants[choice - 1])
+                print(f"{restaurants[choice - 1].name} added to your selection.")
+            else:
+                print("Invalid choice. Please try again.")
