@@ -1,0 +1,29 @@
+class StudentVerifier:
+    def __init__(self):
+        # Sample student database (ID, Status)
+        self.student_database = {
+            "12345": "Enrolled",
+            "67890": "Graduated",
+            "54321": "Suspended",
+            # Add more students as needed
+        }
+
+    def verify_status(self, student_id):
+        # Check if the student ID exists in the database
+        if student_id in self.student_database:
+            status = self.student_database[student_id]
+            print(f"Student with ID {student_id} is {status}.")
+        else:
+            print(f"Student with ID {student_id} not found in the database.")
+
+
+# Example usage
+if __name__ == "__main__":
+    verifier = StudentVerifier()
+
+    # Replace 'input()' with the actual student ID from user input or any other source
+    user_input_id = input("Enter the student ID to verify: ")
+
+    verifier.verify_status(user_input_id)
+
+
