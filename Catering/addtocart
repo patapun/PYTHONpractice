@@ -1,0 +1,6 @@
+post_headers = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36', 'x-requested-with': 'XMLHttpRequest', 'content-type': 'application/x-www-form-urlencoded'}
+post_data = {"utf-8": "%E2%9C%93", "commit": "add to cart"}
+url = "https://www.supremenewyork.com/shop/{productid}/add".format(productid=id)
+
+add_to_cart = requests.post(url, headers=post_headers, data=post_data)
+print(add_to_cart.content)
